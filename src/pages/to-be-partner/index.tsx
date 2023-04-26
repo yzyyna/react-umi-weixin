@@ -1,12 +1,12 @@
-import { Button, Divider, Grid, Space } from "antd-mobile";
-import "./to-be-partner.less";
-import Icon from "@/components/Icon";
+import { Button, Divider, Grid, Space } from 'antd-mobile';
+import './to-be-partner.less';
+import Icon from '@/components/Icon';
 
 export default () => (
   <>
     <div
       style={{
-        padding: "20px 0",
+        padding: '20px 0',
       }}
     >
       <Space direction="vertical">

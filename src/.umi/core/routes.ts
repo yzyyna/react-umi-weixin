@@ -1,31 +1,31 @@
 // @ts-nocheck
-import React from "react";
-import { ApplyPluginsType } from "/Users/mac/Projects/GitHub/react-umi-weixin/node_modules/umi/node_modules/@umijs/runtime";
-import * as umiExports from "./umiExports";
-import { plugin } from "./plugin";
+import React from 'react';
+import { ApplyPluginsType } from '/Users/mac/Projects/GitHub/react-umi-weixin/node_modules/umi/node_modules/@umijs/runtime';
+import * as umiExports from './umiExports';
+import { plugin } from './plugin';
 
 export function getRoutes() {
   const routes = [
-    {
-      path: "/",
-      exact: true,
-      component: require("@/pages/index.tsx").default,
-    },
-    {
-      path: "/share",
-      exact: true,
-      component: require("@/pages/share/index.tsx").default,
-    },
-    {
-      path: "/to-be-partner",
-      exact: true,
-      component: require("@/pages/to-be-partner/index.tsx").default,
-    },
-  ];
+  {
+    "path": "/",
+    "component": require('@/pages/index').default,
+    "exact": true
+  },
+  {
+    "path": "/share",
+    "component": require('@/pages/share').default,
+    "exact": true
+  },
+  {
+    "path": "/to-be-partner",
+    "component": require('@/pages/to-be-partner').default,
+    "exact": true
+  }
+];
 
   // allow user to extend routes
   plugin.applyPlugins({
-    key: "patchRoutes",
+    key: 'patchRoutes',
     type: ApplyPluginsType.event,
     args: { routes },
   });
